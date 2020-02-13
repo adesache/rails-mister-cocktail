@@ -1,0 +1,19 @@
+
+<div class="container">
+  <h1>Mister cocktails</h1>
+
+  <h3>Create a new cocktail</h3>
+
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+
+  <h2 class="mt-4">All Cocktails</h2>
+  <% @cocktails.each do |cocktail| %>
+  <div class="card p-3 mt-4">
+    <%= link_to cocktail.name, cocktail_path(cocktail) %>
+  </div>
+  <% end %>
+</div>
+
