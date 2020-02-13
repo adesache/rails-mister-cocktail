@@ -1,0 +1,16 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1586&q=80);">
+  <div class="container">
+    <h1 class="mb-3">Le Wagon Blender brings great cocktails to creative bartenders</h1>
+    <p class="mb-5">Change your night life with the best recipes cocktails in the world.</p>
+
+    <%= simple_form_for @cocktail do |f| %>
+    <div class="d-flex justify-content-start">
+      <%= f.input :name, placeholder: 'My terrific cocktail', label: false, input_html: { class: 'flex-grow rounded-pill' } %>
+      <div>
+        <%= f.submit class: 'btn btn-primary mb-2 ml-2 rounded-pill' %>
+      </div>
+    </div>
+    <% end %>
+
+  </div>
+</div>
