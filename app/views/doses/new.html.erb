@@ -2,7 +2,9 @@
   <h1>Add ingredients</h1>
   <%= simple_form_for [@cocktail, @dose] do |f| %>
       <%= f.input :description, hint: 'Describe the quantity and dosage' %>
-      <%= f.association :ingredient %>
+      <%= f.input :ingredient, collection: Ingredient.all.sort_by { |ingredient| ingredient.name}  %>
       <%= f.submit class: 'btn btn-primary' %>
   <% end %>
 </div>
+
+<!-- .sort_by { |ingredient| ingredient.name} -->
